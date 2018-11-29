@@ -1,0 +1,111 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/login_background"
+    tools:context=".MainActivity">
+
+    <EditText
+        android:id="@+id/login_email_pt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="94dp"
+        android:layout_marginLeft="94dp"
+        android:layout_marginTop="114dp"
+        android:layout_marginEnd="75dp"
+        android:layout_marginRight="75dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_login_email"
+        android:ems="10"
+        android:hint="@string/login_email_hint"
+        android:inputType="textPersonName"
+        android:textColorHint="@color/login_passwd_hint_color" />
+
+    <Button
+        android:id="@+id/login_btn_save"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_marginStart="141dp"
+        android:layout_marginLeft="141dp"
+        android:layout_marginTop="245dp"
+        android:layout_marginEnd="155dp"
+        android:layout_marginRight="155dp"
+        android:background="@android:color/holo_blue_dark"
+        android:text="@string/log_in"
+        android:textColor="@android:color/white"
+        android:textSize="18dp"
+        android:textStyle="bold" />
+
+    <EditText
+        android:id="@+id/login_et_password"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/login_email_pt"
+        android:layout_alignStart="@+id/login_email_pt"
+        android:layout_alignLeft="@id/login_email_pt"
+        android:layout_marginStart="-3dp"
+        android:layout_marginLeft="-3dp"
+        android:layout_marginTop="43dp"
+        android:background="@android:color/transparent"
+        android:drawableLeft="@drawable/ic_login_password"
+        android:ems="10"
+        android:hint="@string/login_passwd_hint"
+        android:inputType="textPassword"
+        android:textColorHint="@color/login_passwd_hint_color" />
+
+    <Button
+        android:id="@+id/login_btn_account_profesor"
+        android:layout_width="147dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="20dp"
+        android:layout_marginLeft="20dp"
+        android:layout_marginBottom="21dp"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:text="@string/login_btn_profesor_account"
+        android:textColor="@color/login_tie_text_hint_color" />
+
+    <Button
+        android:id="@+id/login_btn_account_student"
+        android:layout_width="158dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentEnd="true"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="21dp"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:text="@string/login_btn_account_student"
+        android:textColor="@color/login_tie_text_hint_color" />
+
+    <TextView
+        android:id="@+id/login_tie_account"
+        android:layout_width="319dp"
+        android:layout_height="40dp"
+        android:layout_alignParentBottom="true"
+        android:layout_marginEnd="-259dp"
+        android:layout_marginBottom="70dp"
+        android:layout_toStartOf="@+id/login_et_password"
+        android:text="@string/login_tie_account"
+        android:textAlignment="center"
+        android:textColor="@color/login_tie_text_hint_color"
+        android:textSize="16dp"
+        android:layout_toLeftOf="@+id/login_et_password"
+        android:layout_marginRight="-259dp" />
+
+</RelativeLayout>

@@ -1,0 +1,170 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    android:fadeScrollbars="true"
+    android:paddingLeft="20dp"
+    android:paddingRight="20dp"
+    android:scrollbarDefaultDelayBeforeFade="@android:integer/status_bar_notification_info_maxnum"
+    tools:context=".AddStudentsProfileActivity">
+
+
+
+    <LinearLayout
+        android:layout_width="364dp"
+        android:layout_height="355dp"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:background="?attr/listChoiceBackgroundIndicator"
+        android:orientation="vertical">
+
+    <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="?android:attr/colorForeground">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/student_Fname_tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="@string/first_name"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textColorLink="@android:color/background_dark"
+                android:textStyle="italic" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:textColorHint="?android:attr/colorForeground">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/student_Lname_tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:hint="@string/last_name"
+                android:inputType="text"
+                android:textColor="@android:color/black"
+                android:textStyle="italic" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="?android:attr/colorForeground">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/student_grupa_tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/grupa"
+                android:inputType="number"
+                android:textColor="@android:color/black"
+                android:textStyle="italic" />
+        </android.support.design.widget.TextInputLayout>
+
+        <TextView
+            android:id="@+id/text_select"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:layout_marginBottom="5dp"
+            android:text="@string/select_serie"
+            android:textColor="?attr/actionMenuTextColor"
+            android:textColorHint="?android:attr/colorForeground"
+            android:textSize="20dp"
+            android:textStyle="italic" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp">
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Spinner
+            android:id="@+id/student_seria_tie"
+            android:layout_width="340dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="5dp" />
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="?android:attr/colorForeground">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/student_email_tie"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/email"
+                android:inputType="textEmailAddress"
+                android:textColor="@android:color/black"
+                android:textStyle="italic" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="?android:attr/colorForeground">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/student_password"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/password"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textStyle="italic" />
+        </android.support.design.widget.TextInputLayout>
+
+        <android.support.design.widget.TextInputLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="10dp"
+            android:textColorHint="?android:attr/colorForeground">
+
+            <android.support.design.widget.TextInputEditText
+                android:id="@+id/student_password_2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="20dp"
+                android:hint="@string/repassword"
+                android:inputType="textPassword"
+                android:textColor="@android:color/black"
+                android:textStyle="italic" />
+
+        </android.support.design.widget.TextInputLayout>
+
+        <Button
+            android:id="@+id/student_add"
+            android:layout_width="179dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="81dp"
+            android:layout_marginLeft="40dp"
+            android:layout_marginTop="30dp"
+            android:layout_marginEnd="92dp"
+            android:layout_marginRight="92dp"
+            android:layout_marginBottom="36dp"
+            android:background="@android:drawable/screen_background_light_transparent"
+            android:lineSpacingExtra="8dp"
+            android:text="@string/add_student"
+            android:textColor="@android:color/black"
+            android:textSize="20dp"
+            android:textStyle="bold" />
+    </LinearLayout>
+
+</ScrollView>
