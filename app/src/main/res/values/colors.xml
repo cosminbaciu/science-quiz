@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="colorPrimary">#008577</color>
+    <color name="colorPrimaryDark">#28d495</color>
+    <color name="colorAccent">#D81B60</color>
+    <color name="login_passwd_hint_color">#010000</color>
+    <color name="login_tie_text_hint_color">#060303</color>
+</resources>

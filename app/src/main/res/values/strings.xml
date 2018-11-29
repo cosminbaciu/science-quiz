@@ -1,0 +1,172 @@
+<resources>
+    <string name="app_name">Science Quiz</string>
+    <string name="action_settings">Setari</string>
+    <string name="add_test">Adaugare test</string>
+    <string name="materie">Materie</string>
+    <string name="max_points">Punctaj maxim</string>
+    <string name="number_of_questions">Numar intrebari</string>
+    <string name="promo_criteria">Criteriu de promovare</string>
+    <string name="add">Adauga</string>
+    <string name="question">Intrebarea</string>
+    <string name="sentence">Enunt</string>
+    <string name="response_A">Varianta A</string>
+    <string name="response_B">Varianta B</string>
+    <string name="response_C">Varianta C</string>
+    <string name="response_D">Varianta D</string>
+    <string name="correct_answer">Raspuns corect (A, B, C sau D)</string>
+    <string name="next">Urmatoarea</string>
+    <string name="add_test_max_points_error">Introduceti punctajul maxim</string>
+    <string name="add_test_promote_requirements_error">Introduceti criteriul de promovare</string>
+    <string name="add_test_number_of_questions_error">Introduceti numarul de intrebari</string>
+    <string name="view_test">Vizualizare test</string>
+
+
+    <string-array name="discipline_array">
+        <item>POO</item>
+        <item>DAM</item>
+        <item>JAVA</item>
+    </string-array>
+
+    <string name="student_form">Formular Student</string>
+    <string name="select_serie">Selecteaza Seria</string>
+    <string name="first_name">Prenume</string>
+    <string name="last_name">Nume</string>
+    <string name="grupa">Grupa</string>
+    <string name="phone">Telefon</string>
+    <string name="add_student">ADAUGA STUDENT</string>
+    <string name="password">Parola</string>
+    <string name="acces_game_rome">Aceseaza Test</string>
+    <string name="acces_game_room">Aceseaza Test</string>
+    <string name="code_acces">Cod de acees</string>
+    <string name="nickname">Nickname</string>
+    <string name="repassword">Reintrodu parola</string>
+    <string name="active">Active</string>
+    <string name="connected">Connected</string>
+    <string name="disconnected">Disconnected</string>
+    <string name="student_score">Notele Studentului</string>
+    <string name="note_list">Lista de note</string>
+    <string name="student_first_name_valid_error">Care este prenumele tau?</string>
+    <string name="student_last_name_valid_error">Care este numele tau?</string>
+    <string name="student_grupa_valid_error">Ce grupa esti?</string>
+    <string name="student_email_valid_error">Care e adresa ta de email</string>
+    <string name="student_email_format_valid_error">Introdu o adresa valida de email</string>
+    <string name="student_password_valid_error">Introdu parola</string>
+    <string name="student_repassword_valid_error">Introdu parola</string>
+    <string name="student_passwords_valid_error">Parolele nu coincid</string>
+    <string name="student_adaugat">Student adaugat!</string>
+    <string name="acces_code_valid_error">Introdu codul!</string>
+    <string name="acces_code_format_valid_error">Cod incorect!</string>
+    <string name="acces_nickname_valid_error">Introdu nickname!</string>
+    <string-array name="select_serie">
+        <item>A</item>
+        <item>B</item>
+        <item>C</item>
+        <item>D</item>
+        <item>E</item>
+    </string-array>
+    <string-array name="select_materie">
+        <item>Dezvoltarea aplicatiilor mobile</item>
+        <item>Tehnologii Web</item>
+        <item>Multimedia</item>
+        <item>Retele de calculatoare</item>
+        <item>Analiza de Date</item>
+        <item>Econometrie</item>
+    </string-array>
+
+
+    <string name="old_pass">Nu folosi parola veche!</string>
+    <string name="not_match">Parolele nu coincid!</string>
+    <string name="changed">Parola schimbata!</string>
+    <string name="mandatory">Toate campurile sunt obligatorii!</string>
+    <string name="registered">Inregistrat cu succes!</string>
+    <string name="login_email_hint">Email</string>
+    <string name="login_email_text">Email</string>
+    <string name="login_passwd_hint">Parola</string>
+    <string name="login_rb_student">Student</string>
+    <string name="login_rb_profesor">Profesor</string>
+    <string name="login_btn_save_text">SALVEAZA</string>
+    <string name="login_tie_account">Nu ai cont? Creaza-ti unul!</string>
+    <string name="login_btn_profesor_account">Adauga profesor</string>
+    <string name="login_btn_account_student">Adauga Student</string>
+    <string name="vizualizare_feedback_hint">Rezultatul testului:</string>
+    <string name="vizualizare_feedback_btn_hint">Inapoi</string>
+    <string name="feedback_profesor_hint_nume_student">Numele studentului:</string>
+    <string name="feedback_profesor_grupa_hint">Grupa</string>
+    <string name="feedback_profesor_text_hint">Feedback in urma testului:</string>
+    <string name="feedbackstudent_numeprofesor">Nume profesor:</string>
+    <string name="feedbackstudent_grupa_hint">Grupa:</string>
+    <string name="feedbackstudent_text_hint">Feedback:</string>
+    <string name="feedbackstudent_btn_send">Trimite feedback</string>
+    <string name="feedbackstudent_btn_inapoi">Inapoi</string>
+    <string name="change_password">Schimba parola</string>
+    <string name="show_tests">Arata testele</string>
+    <string name="welcome">Bun venit</string>
+    <string name="are_you_ready">Esti pregatit?</string>
+    <string name="start_test">Start</string>
+    <string name="validare">Emailul sau parola incorecte!</string>
+    <string name="log_in">Log In</string>
+    <string name="log_out">Log Out</string>
+    <string name="enter">Enter</string>
+    <string name="new_password">Noua parola</string>
+    <string name="confirm_new_password">Confirma parola</string>
+    <string name="change_password_2">Schimba parola</string>
+    <string name="varianta_a">Varianta A</string>
+    <string name="varianta_b">Varianta B</string>
+    <string name="varianta_c">Varianta C</string>
+    <string name="varianta_d">Varianta D</string>
+    <string name="seconds_remaining">secunde ramase:</string>
+    <string name="passing_score">Nota de trecere:</string>
+    <string name="score">Nota:</string>
+    <string name="you_ve_finished_the_test">Ai terminat testul!</string>
+    <string name="send">Trimite</string>
+    <string name="puncte">puncte</string>
+    <string name="nimic">Nimic</string>
+    <string name="intrebare">Intrebarea</string>
+    <string name="no_question">No. Question</string>
+    <string name="admin_email">admin@ie.ase.ro</string>
+    <string name="admin_parola">admin</string>
+    <string name="stud_email">stud@stud.ase.ro</string>
+    <string name="stud_parola">stud</string>
+    <string name="felicitari">Felicitari! Ai trecut testul!</string>
+    <string name="picat">Ai picat! :(</string>
+    <string name="my_classes">Grupele mele</string>
+    <string name="last_name_2">Last Name</string>
+    <string name="parola">Parola</string>
+    <string name="confirma_parola">Confirma parola</string>
+    <string name="adauga_prof">ADAUGA PROFESOR</string>
+    <string name="feedback">Feedback</string>
+    <string name="_80">80</string>
+    <string name="_50">50</string>
+    <string name="genereaza">Genereaza</string>
+    <string name="old_password">Parola veche</string>
+    <string name="cod">Cod</string>
+    <string name="timer">Timer</string>
+    <string name="email">Email</string>
+    <string name="textview">TextView</string>
+    <string name="radiobutton">RadioButton</string>
+    <string name="cod_acess">ABCDEF012GHIJKL345MNOPQR678STUVWXYZ9</string>
+    <string name="_1060">1060</string>
+    <string name="_1061">1061</string>
+    <string name="_1062">1062</string>
+    <string name="_1063">1063</string>
+    <string name="_1064">1064</string>
+    <string name="test1">Test DAM</string>
+    <string name="test2">Test WEB</string>
+    <string name="test3">Test Multimedia</string>
+    <string name="test4">Test Econometrie</string>
+    <string name="test5">Test Cibernetica</string>
+    <string name="test6">Test Analiza de Date</string>
+    <string name="test7">Test DAM 2</string>
+    <string name="test8">Test Retele 1</string>
+    <string name="DAM">DAM-shared.preferences-12/12/2018</string>
+    <string name="POO">POO-pointeri-13/10/2017</string>
+    <string name="RETELE">Retele-Apache2.8-25/11/2018</string>
+    <string name="JAVA"><![CDATA[JAVA-client&server-15/12/2018]]></string>
+    <string name="name1">Popescu Ion</string>
+    <string name="name2">Popescu Vasile</string>
+    <string name="name3">Mircea Rares</string>
+    <string name="name4">Ionut Cobuz</string>
+    <string name="name5">Stefanescu Stefan</string>
+
+
+</resources>
