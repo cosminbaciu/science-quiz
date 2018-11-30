@@ -1,5 +1,6 @@
 package com.example.cosminbaciu.kahoot;
 
+import android.annotation.SuppressLint;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.design.widget.TextInputEditText;
@@ -10,7 +11,7 @@ import android.widget.Toast;
 
 public class AccesGameActivity extends AppCompatActivity {
   TextInputEditText codeAcces;
-  static TextInputEditText nickname;
+  TextInputEditText nickname;
    Button accesButton;
 
     @Override
@@ -30,10 +31,12 @@ public class AccesGameActivity extends AppCompatActivity {
     private View.OnClickListener addInSession(){
         return new View.OnClickListener(){
 
+            @SuppressLint("StringFormatInvalid")
             @Override
             public void onClick(View v) {
                if(isValid()){
                    Intent intent = new Intent(getApplicationContext(), StartTestActivity.class);
+                   intent.putExtra(getString(R.string.nickname), nickname.getText().toString());
                    startActivity(intent);
                }
             }

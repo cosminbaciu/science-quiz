@@ -20,7 +20,7 @@ public class StartTestActivity extends AppCompatActivity {
 
     private void init() {
       tvWelcome =findViewById(R.id.textView_welcome);
-      tvWelcome.setText(getString(R.string.welcome)+" "+AccesGameActivity.nickname.getText().toString()+ " !");
+      tvWelcome.setText(getString(R.string.welcome)+" "+ getIntent().getExtras().getString(getString(R.string.nickname)) + " !");
       tvReady =findViewById(R.id.textView_ready);
       buttonStart =findViewById(R.id.button_start_test);
       buttonStart.setOnClickListener(new View.OnClickListener() {
