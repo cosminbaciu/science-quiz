@@ -6,13 +6,17 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
 
 public class ProfMenuActivity extends AbstractActivity {
 
     Button changePassword;
     Button addTest;
     Button showTests;
+    Button jsondata;
     Switch profLogOut;
+    public static String data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,10 +26,12 @@ public class ProfMenuActivity extends AbstractActivity {
         addTest = findViewById(R.id.button5);
         showTests = findViewById(R.id.button6);
         changePassword = findViewById(R.id.button4);
+        jsondata = findViewById(R.id.button9);
 
         addTest.setOnClickListener(addTest());
         showTests.setOnClickListener(showTests());
         changePassword.setOnClickListener(changePassword());
+        jsondata.setOnClickListener(showData());
 
         profLogOut =findViewById(R.id.prof_switch_login);
         profLogOut.setOnCheckedChangeListener(isLogin());
@@ -78,4 +84,16 @@ public class ProfMenuActivity extends AbstractActivity {
             }
         };
     }
+
+    private View.OnClickListener showData()
+    {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                Toast.makeText(ProfMenuActivity.this, data, Toast.LENGTH_SHORT).show();
+            }
+        };
+
+    }
+
 }
