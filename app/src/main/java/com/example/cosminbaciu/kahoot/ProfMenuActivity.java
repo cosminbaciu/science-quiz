@@ -14,6 +14,7 @@ public class ProfMenuActivity extends AbstractActivity {
     Button changePassword;
     Button addTest;
     Button showTests;
+    Switch profLogOut;
     Button jsondata;
     Switch profLogOut;
     public static String data;
