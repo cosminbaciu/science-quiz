@@ -1,9 +1,15 @@
 package com.example.cosminbaciu.kahoot;
 
+import android.annotation.SuppressLint;
+import android.os.Build;
 import android.os.Bundle;
+import android.support.annotation.RequiresApi;
 import android.support.v7.app.AppCompatActivity;
 import android.widget.ListView;
 
+import java.text.ParseException;
+import java.text.SimpleDateFormat;
+import java.time.LocalDate;
 import java.util.ArrayList;
 
 public class NoteListActivity extends AppCompatActivity {
@@ -12,27 +18,34 @@ public class NoteListActivity extends AppCompatActivity {
    private MyAdapter adapter;
    ArrayList<Item> items=new ArrayList<>();
 
-
+   @SuppressLint("SimpleDateFormat")
+   SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-mm-yyyy");
+   
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_note_list);
-        getItems();
+        try {
+            getItems();
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
         listView=findViewById(R.id.note_listview);
         adapter=new MyAdapter(items,this);
         listView.setAdapter(adapter);
       
     }
 
-    private void getItems() {
-        items.add(new Item(getString(R.string.test1)));
-        items.add(new Item(getString(R.string.test2)));
-        items.add(new Item(getString(R.string.test3)));
-        items.add(new Item(getString(R.string.test4)));
-        items.add(new Item(getString(R.string.test5)));
-        items.add(new Item(getString(R.string.test6)));
-        items.add(new Item(getString(R.string.test7)));
-        items.add(new Item(getString(R.string.test8)));
+
+    private void getItems() throws ParseException {
+        items.add(new Item(getString(R.string.test1),  simpleDateFormat.parse("10-10-2018")));
+        items.add(new Item(getString(R.string.test2),  simpleDateFormat.parse("10-10-2018")));
+        items.add(new Item(getString(R.string.test3),  simpleDateFormat.parse("10-10-2018")));
+        items.add(new Item(getString(R.string.test4),  simpleDateFormat.parse("10-10-2018")));
+        items.add(new Item(getString(R.string.test5),  simpleDateFormat.parse("10-10-2018")));
+        items.add(new Item(getString(R.string.test6),  simpleDateFormat.parse("10-10-2018")));
+        items.add(new Item(getString(R.string.test7),  simpleDateFormat.parse("10-10-2018")));
+        items.add(new Item(getString(R.string.test8),  simpleDateFormat.parse("10-10-2018")));
     }
 
 

@@ -7,4 +7,5 @@ import android.widget.TextView;
 public class ListViewHolder {
     TextView tvTestName ;
     Button btnItem;
+    TextView tvDate;
 }
