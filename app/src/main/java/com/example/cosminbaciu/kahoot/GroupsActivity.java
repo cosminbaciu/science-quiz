@@ -15,6 +15,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class GroupsActivity extends AppCompatActivity {
@@ -28,7 +29,7 @@ public class GroupsActivity extends AppCompatActivity {
 
         int idTest = 0;
 
-        final String[] names = new String[100];
+        final List<String> names = new ArrayList<>();
 
         final String jsonText = getIntent().getExtras().getString(getString(R.string.json));
 
@@ -56,24 +57,24 @@ public class GroupsActivity extends AppCompatActivity {
                     test = listaTeste.get(i);
 
                     for(int j=0; j< test.getListaGrupe().size(); j++)
-                        names[j] = String.valueOf(listaTeste.get(i).getListaGrupe().get(j).getNumeGrupa());
+                        names.add(String.valueOf(listaTeste.get(i).getListaGrupe().get(j).getNumeGrupa()));
                 }
 
 
-            Button[] buttons = new Button[names.length];
-            for (int i = 0; i < names.length; i++) {
+            Button[] buttons = new Button[names.size()];
+            for (int i = 0; i < names.size(); i++) {
                 Button button = new Button(this);
                 button.setId(i+1);
-                button.setText(names[i]);
+                button.setText(names.get(i));
                 button.setY(i*150);
                 buttons[i] = button;
             }
 
             LinearLayout layout = (LinearLayout)findViewById(R.id.linearLayout);
-            for (int i = 0; i < names.length; i++) {
+            for (int i = 0; i < names.size(); i++) {
                 layout.addView(buttons[i]);
             }
-            for (int i = 0; i < names.length; i++) {
+            for (int i = 0; i < names.size(); i++) {
                 final Test finalTest = test;
                 final int finalI = i;
                 final int finalIdTest = idTest;

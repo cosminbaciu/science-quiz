@@ -15,16 +15,19 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class ShowTestsActivity extends AppCompatActivity {
+
+    private int i;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_afisare_teste);
 
-        final String[] names = new String[100];
+        final List<String> names = new ArrayList<>();
 
         final String jsonText = getIntent().getExtras().getString(getString(R.string.json));
 
@@ -38,7 +41,7 @@ public class ShowTestsActivity extends AppCompatActivity {
 
             for(int i=0; i<listaTeste.size(); i++)
             {
-                names[i] = listaTeste.get(i).getNumeTest();
+                names.add(listaTeste.get(i).getNumeTest());
             }
 
         } catch (JSONException e) {
@@ -46,17 +49,17 @@ public class ShowTestsActivity extends AppCompatActivity {
         }
 
 
-        Button[] buttons = new Button[names.length];
-        for (int i = 0; i < names.length; i++) {
+        Button[] buttons = new Button[names.size()];
+        for (int i = 0; i < names.size(); i++) {
             Button button = new Button(this);
             button.setId(i + 1);
-            button.setText(names[i]);
+            button.setText(names.get(i));
             button.setY(i*150);
             buttons[i] = button;
         }
 
         ConstraintLayout layout = findViewById(R.id.linearLayout2);
-        for (int i = 0; i < names.length; i++) {
+        for (int i = 0; i < names.size(); i++) {
             layout.addView(buttons[i]);
             final int finalI = i;
             final int finalI1 = i;
@@ -65,8 +68,8 @@ public class ShowTestsActivity extends AppCompatActivity {
                 public void onClick(View v) {
                     Intent intent = new Intent(getApplicationContext(), GroupsActivity.class);
                     intent.putExtra(getString(R.string.json), jsonText);
-                    intent.putExtra("nume",  names[finalI]);
-                    Toast toast = Toast.makeText(getApplicationContext(), names[finalI],  Toast.LENGTH_SHORT);
+                    intent.putExtra("nume",  names.get(finalI));
+                    Toast toast = Toast.makeText(getApplicationContext(), names.get(finalI),  Toast.LENGTH_SHORT);
                     toast.show();
                     startActivity(intent);
                 }

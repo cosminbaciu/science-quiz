@@ -16,6 +16,7 @@ import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class StudentsMarks extends AppCompatActivity {
@@ -27,7 +28,7 @@ public class StudentsMarks extends AppCompatActivity {
 
         Test test = null;
 
-        String[] names =  new String[100];
+        List<String> names =  new ArrayList<>();
 
 
 
@@ -56,24 +57,24 @@ public class StudentsMarks extends AppCompatActivity {
                         if(String.valueOf(test.getListaGrupe().get(j).getNumeGrupa()).equals(String.valueOf(getIntent().getExtras().getString("grupa"))))
                     {
                         for( int k=0; k< test.getListaGrupe().get(j).getListaStudenti().size(); k++)
-                            names[k] = test.getListaGrupe().get(j).getListaStudenti().get(k).getNume();
+                            names.add(test.getListaGrupe().get(j).getListaStudenti().get(k).getNume());
                     }
                 }
 
-            Button[] buttons = new Button[names.length];
-            for (int i = 0; i < names.length; i++) {
+            Button[] buttons = new Button[names.size()];
+            for (int i = 0; i < names.size(); i++) {
                 Button button = new Button(this);
                 button.setId(i + 1);
-                button.setText(names[i]);
+                button.setText(names.get(i));
                 button.setY(i * 150);
                 buttons[i] = button;
             }
 
             LinearLayout layout = (LinearLayout) findViewById(R.id.linearLayout);
-            for (int i = 0; i < names.length; i++) {
+            for (int i = 0; i < names.size(); i++) {
                 layout.addView(buttons[i]);
             }
-            for (int i = 0; i < names.length; i++) {
+            for (int i = 0; i < names.size(); i++) {
                 buttons[i].setOnClickListener(new View.OnClickListener() {
                     @Override
                     public void onClick(View v) {

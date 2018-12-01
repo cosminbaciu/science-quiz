@@ -44,7 +44,7 @@ public class fetchData extends AsyncTask<Void, Void, String> {
         super.onPostExecute(s);
 
         ProfMenuActivity.data.setText(this.data);
-//        ProfMenuActivity.data.setVisibility(View.INVISIBLE);
+        ProfMenuActivity.data.setVisibility(View.INVISIBLE);
     }
 
 }
