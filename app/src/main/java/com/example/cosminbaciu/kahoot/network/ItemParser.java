@@ -40,7 +40,7 @@ public class ItemParser {
                     JSONArray array2 = grupObject.getJSONArray("studenti");
                     if (array2 != null) {
                         for (int j = 0; j < array2.length(); j++) {
-                            JSONObject studObject = array.getJSONObject(j);
+                            JSONObject studObject = array2.getJSONObject(j);
                             if (studObject != null) {
                                 String numeStudent = studObject.getString("numeStudent");
                                 Double notaTest = studObject.getDouble("notaTest");

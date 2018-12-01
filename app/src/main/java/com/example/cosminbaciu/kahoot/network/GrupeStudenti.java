@@ -61,4 +61,15 @@ public class GrupeStudenti implements Serializable {
     public void setNumeGrupa(Integer numeGrupa) {
         this.numeGrupa = numeGrupa;
     }
+
+    @Override
+    public String toString() {
+        return "GrupeStudenti{" +
+                "listaStudenti=" + listaStudenti +
+                ", procentPromovati=" + procentPromovati +
+                ", an=" + an +
+                ", specializare='" + specializare + '\'' +
+                ", numeGrupa=" + numeGrupa +
+                '}';
+    }
 }

@@ -51,4 +51,15 @@ public class Test implements Serializable {
     public void setNrIntrebari(Integer nrIntrebari) {
         this.nrIntrebari = nrIntrebari;
     }
+
+
+    @Override
+    public String toString() {
+        return "Test{" +
+                "numeTest='" + numeTest + '\'' +
+                ", punctajMaxim=" + punctajMaxim +
+                ", listaGrupe=" + listaGrupe +
+                ", nrIntrebari=" + nrIntrebari +
+                '}';
+    }
 }

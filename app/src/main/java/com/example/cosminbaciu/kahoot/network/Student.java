@@ -39,4 +39,13 @@ public class Student implements Serializable {
     public void setFeedback(String feedback) {
         this.feedback = feedback;
     }
+
+    @Override
+    public String toString() {
+        return "Student{" +
+                "nume='" + nume + '\'' +
+                ", notaTest=" + notaTest +
+                ", feedback='" + feedback + '\'' +
+                '}';
+    }
 }

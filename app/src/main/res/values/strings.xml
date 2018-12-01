@@ -167,6 +167,7 @@
     <string name="name3">Mircea Rares</string>
     <string name="name4">Ionut Cobuz</string>
     <string name="name5">Stefanescu Stefan</string>
+    <string name="json">jsonString</string>
 
 
 </resources>

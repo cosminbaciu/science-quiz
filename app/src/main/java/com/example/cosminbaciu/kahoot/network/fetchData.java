@@ -19,7 +19,7 @@ public class fetchData extends AsyncTask<Void, Void, String> {
     protected String doInBackground(Void... voids) {
 
         try{
-            URL url = new URL("https://api.myjson.com/bins/111bvm");
+            URL url = new URL("https://api.myjson.com/bins/1f11d6");
 
             HttpURLConnection httpURLConnection = (HttpURLConnection) url.openConnection();
             InputStream inputStream = httpURLConnection.getInputStream();
