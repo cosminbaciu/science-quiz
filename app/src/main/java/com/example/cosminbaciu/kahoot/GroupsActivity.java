@@ -38,17 +38,22 @@ public class GroupsActivity extends AppCompatActivity {
 
             List<Test> listaTeste = ItemParser.getItemListFromJsonArray(tests);
 
+//            Toast toast1 = Toast.makeText(getApplicationContext(), listaTeste.get(0).getNumeTest(),  Toast.LENGTH_SHORT);
+//            toast1.show();
+
             for(int i=0; i<listaTeste.size(); i++)
-            {
-                 if(listaTeste.get(i).getNumeTest().equals(getIntent().getExtras().getString("nume")));
+                 if(listaTeste.get(i).getNumeTest().equals(getIntent().getExtras().getString("nume")))
                 {
-                    
+
+                    Toast toast = Toast.makeText(getApplicationContext(), getIntent().getExtras().getString("nume"),  Toast.LENGTH_SHORT);
+                    toast.show();
+
+
                     test = listaTeste.get(i);
 
                     for(int j=0; j< test.getListaGrupe().size(); j++)
                         names[j] = String.valueOf(listaTeste.get(i).getListaGrupe().get(j).getNumeGrupa());
                 }
-            }
 
         } catch (JSONException e) {
             e.printStackTrace();
