@@ -6,13 +6,19 @@ import android.view.View;
 import android.widget.Button;
 import android.widget.CompoundButton;
 import android.widget.Switch;
+import android.widget.TextView;
+import android.widget.Toast;
+
+import com.example.cosminbaciu.kahoot.network.fetchData;
 
 public class ProfMenuActivity extends AbstractActivity {
 
     Button changePassword;
     Button addTest;
     Button showTests;
+    Button jsondata;
     Switch profLogOut;
+    public static TextView data;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -22,13 +28,28 @@ public class ProfMenuActivity extends AbstractActivity {
         addTest = findViewById(R.id.button5);
         showTests = findViewById(R.id.button6);
         changePassword = findViewById(R.id.button4);
+        jsondata = findViewById(R.id.button9);
 
         addTest.setOnClickListener(addTest());
         showTests.setOnClickListener(showTests());
         changePassword.setOnClickListener(changePassword());
+        jsondata = (Button) findViewById(R.id.button9);
+        data = findViewById(R.id.textView7);
 
         profLogOut =findViewById(R.id.prof_switch_login);
         profLogOut.setOnCheckedChangeListener(isLogin());
+
+
+        jsondata.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                fetchData process = new fetchData();
+                process.execute();
+
+            }
+        });
+
+
 
     }
 
@@ -78,4 +99,6 @@ public class ProfMenuActivity extends AbstractActivity {
             }
         };
     }
+
+
 }
