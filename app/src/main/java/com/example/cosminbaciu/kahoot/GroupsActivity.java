@@ -26,6 +26,8 @@ public class GroupsActivity extends AppCompatActivity {
 
         Test test = null;
 
+        int idTest = 0;
+
         final String[] names = new String[100];
 
         final String jsonText = getIntent().getExtras().getString(getString(R.string.json));
@@ -36,7 +38,7 @@ public class GroupsActivity extends AppCompatActivity {
 
             JSONArray tests = jsonObject.getJSONArray("teste");
 
-            List<Test> listaTeste = ItemParser.getItemListFromJsonArray(tests);
+            final List<Test> listaTeste = ItemParser.getItemListFromJsonArray(tests);
 
 //            Toast toast1 = Toast.makeText(getApplicationContext(), listaTeste.get(0).getNumeTest(),  Toast.LENGTH_SHORT);
 //            toast1.show();
@@ -48,6 +50,8 @@ public class GroupsActivity extends AppCompatActivity {
                     Toast toast = Toast.makeText(getApplicationContext(), getIntent().getExtras().getString("nume"),  Toast.LENGTH_SHORT);
                     toast.show();
 
+                    idTest = i;
+
 
                     test = listaTeste.get(i);
 
@@ -55,37 +59,46 @@ public class GroupsActivity extends AppCompatActivity {
                         names[j] = String.valueOf(listaTeste.get(i).getListaGrupe().get(j).getNumeGrupa());
                 }
 
+
+            Button[] buttons = new Button[names.length];
+            for (int i = 0; i < names.length; i++) {
+                Button button = new Button(this);
+                button.setId(i+1);
+                button.setText(names[i]);
+                button.setY(i*150);
+                buttons[i] = button;
+            }
+
+            LinearLayout layout = (LinearLayout)findViewById(R.id.linearLayout);
+            for (int i = 0; i < names.length; i++) {
+                layout.addView(buttons[i]);
+            }
+            for (int i = 0; i < names.length; i++) {
+                final Test finalTest = test;
+                final int finalI = i;
+                final int finalIdTest = idTest;
+                buttons[i].setOnClickListener(new View.OnClickListener() {
+                    @Override
+                    public void onClick(View v) {
+                        Intent intent = new Intent(getApplicationContext(), StudentsMarks.class);
+
+                        Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(finalIdTest), Toast.LENGTH_SHORT);
+                        toast.show();
+
+                        intent.putExtra(getString(R.string.json), jsonText);
+                        intent.putExtra("grupa", String.valueOf(listaTeste.get(finalIdTest).getListaGrupe().get(finalI).getNumeGrupa()));
+                        intent.putExtra("nume",  getIntent().getExtras().getString("nume"));
+
+                        startActivity(intent);
+                    }
+                });
+
+            }
+
         } catch (JSONException e) {
             e.printStackTrace();
         }
 
-
-        Button[] buttons = new Button[names.length];
-        for (int i = 0; i < names.length; i++) {
-            Button button = new Button(this);
-            button.setId(i+1);
-            button.setText(names[i]);
-            button.setY(i*150);
-            buttons[i] = button;
-        }
-
-        LinearLayout layout = (LinearLayout)findViewById(R.id.linearLayout);
-        for (int i = 0; i < names.length; i++) {
-            layout.addView(buttons[i]);
-        }
-        for (int i = 0; i < names.length; i++) {
-            final Test finalTest = test;
-            buttons[i].setOnClickListener(new View.OnClickListener() {
-                @Override
-                public void onClick(View v) {
-                    Intent intent = new Intent(getApplicationContext(), StudentsMarks.class);
-                    Toast toast = Toast.makeText(getApplicationContext(), finalTest.toString(),  Toast.LENGTH_SHORT);
-                    toast.show();
-                    startActivity(intent);
-                }
-            });
-
-        }
 
     }
 }
