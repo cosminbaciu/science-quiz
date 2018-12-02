@@ -1,11 +1,11 @@
 <component name="libraryTable">
   <library name="Gradle: com.android.support:design-circularreveal-28.0.0-alpha1">
     <ANNOTATIONS>
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-circularreveal-28.0.0-alpha1.aar/da61d35f8e38c42b340643356877faf8/annotations.zip!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-circularreveal-28.0.0-alpha1.aar/91baa8c56b9f07ca8bff0981e43df812/annotations.zip!/" />
     </ANNOTATIONS>
     <CLASSES>
-      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-circularreveal-28.0.0-alpha1.aar/da61d35f8e38c42b340643356877faf8/res" />
-      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-circularreveal-28.0.0-alpha1.aar/da61d35f8e38c42b340643356877faf8/jars/classes.jar!/" />
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-circularreveal-28.0.0-alpha1.aar/91baa8c56b9f07ca8bff0981e43df812/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-1/files-1.1/design-circularreveal-28.0.0-alpha1.aar/91baa8c56b9f07ca8bff0981e43df812/res" />
     </CLASSES>
     <JAVADOC />
     <SOURCES>

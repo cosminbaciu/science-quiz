@@ -168,6 +168,9 @@
     <string name="name4">Ionut Cobuz</string>
     <string name="name5">Stefanescu Stefan</string>
     <string name="json">jsonString</string>
+    <string name="emailstud_stud_stud_ase_ro">EmailStud: stud@stud.ase.ro</string>
+    <string name="emailprof_admin_ie_ase_ro">EmailProf: admin@ie.ase.ro</string>
+    <string name="parola_stud_admin">Parola: stud/admin</string>
 
 
 </resources>
