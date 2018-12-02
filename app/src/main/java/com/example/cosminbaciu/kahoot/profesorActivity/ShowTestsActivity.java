@@ -71,8 +71,6 @@ public class ShowTestsActivity extends AppCompatActivity {
                     Intent intent = new Intent(getApplicationContext(), GroupsActivity.class);
                     intent.putExtra(getString(R.string.json), jsonText);
                     intent.putExtra("nume",  names.get(finalI));
-                    Toast toast = Toast.makeText(getApplicationContext(), names.get(finalI),  Toast.LENGTH_SHORT);
-                    toast.show();
                     startActivity(intent);
                 }
             });

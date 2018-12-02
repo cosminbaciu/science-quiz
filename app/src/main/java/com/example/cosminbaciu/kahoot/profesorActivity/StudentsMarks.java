@@ -44,9 +44,6 @@ public class StudentsMarks extends AppCompatActivity {
 
             final List<Test> listaTeste = ItemParser.getItemListFromJsonArray(tests);
 
-            Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(getIntent().getExtras().getString("nume")), Toast.LENGTH_SHORT);
-            toast.show();
-
             for (int i = 0; i < listaTeste.size(); i++)
                 if (listaTeste.get(i).getNumeTest().equals(getIntent().getExtras().getString("nume"))) {
 
@@ -81,7 +78,6 @@ public class StudentsMarks extends AppCompatActivity {
                     public void onClick(View v) {
                         Intent intent = new Intent(getApplicationContext(), FeedbackStudentActivity.class);
                         startActivity(intent);
-                        finish();
                     }
                 });
 

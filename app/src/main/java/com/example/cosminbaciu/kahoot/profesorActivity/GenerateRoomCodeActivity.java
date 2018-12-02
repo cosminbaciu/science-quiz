@@ -14,6 +14,7 @@ public class GenerateRoomCodeActivity extends AbstractActivity {
 
     Button generate;
     TextView code;
+    Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -21,11 +22,13 @@ public class GenerateRoomCodeActivity extends AbstractActivity {
         setContentView(R.layout.generate_room_code_activity);
         initComponent();
         generate.setOnClickListener(generate());
+        back.setOnClickListener(back());
     }
 
     void initComponent(){
         generate = findViewById(R.id.button7);
         code = findViewById(R.id.textView4);
+        back = findViewById(R.id.button10);
     }
 
     private View.OnClickListener generate() {
@@ -42,6 +45,15 @@ public class GenerateRoomCodeActivity extends AbstractActivity {
                 }
                 code.setText(sb1.toString());
 
+            }
+        };
+    }
+
+    private View.OnClickListener back() {
+        return new View.OnClickListener() {
+            @Override
+            public void onClick(View v) {
+                finish();
             }
         };
     }

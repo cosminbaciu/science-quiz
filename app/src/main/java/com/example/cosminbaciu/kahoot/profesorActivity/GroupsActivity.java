@@ -42,15 +42,10 @@ public class GroupsActivity extends AppCompatActivity {
 
             final List<Test> listaTeste = ItemParser.getItemListFromJsonArray(tests);
 
-//            Toast toast1 = Toast.makeText(getApplicationContext(), listaTeste.get(0).getNumeTest(),  Toast.LENGTH_SHORT);
-//            toast1.show();
-
             for(int i=0; i<listaTeste.size(); i++)
                  if(listaTeste.get(i).getNumeTest().equals(getIntent().getExtras().getString("nume")))
                 {
 
-                    Toast toast = Toast.makeText(getApplicationContext(), getIntent().getExtras().getString("nume"),  Toast.LENGTH_SHORT);
-                    toast.show();
 
                     idTest = i;
 
@@ -83,9 +78,6 @@ public class GroupsActivity extends AppCompatActivity {
                     @Override
                     public void onClick(View v) {
                         Intent intent = new Intent(getApplicationContext(), StudentsMarks.class);
-
-                        Toast toast = Toast.makeText(getApplicationContext(), String.valueOf(finalIdTest), Toast.LENGTH_SHORT);
-                        toast.show();
 
                         intent.putExtra(getString(R.string.json), jsonText);
                         intent.putExtra("grupa", String.valueOf(listaTeste.get(finalIdTest).getListaGrupe().get(finalI).getNumeGrupa()));
