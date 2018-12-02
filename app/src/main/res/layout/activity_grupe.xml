@@ -7,7 +7,7 @@
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
     android:orientation="vertical"
-    tools:context=".GroupsActivity">
+    tools:context=".profesorActivity.GroupsActivity">
 
     <TextView
         android:id="@+id/textView"

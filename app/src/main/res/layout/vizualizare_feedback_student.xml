@@ -4,7 +4,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:background="@color/colorPrimaryDark"
-    tools:context=".VizualizareFeedbackActivity">
+    tools:context=".studentActivity.VizualizareFeedbackActivity">
 
     <TextView
         android:id="@+id/vizualizare_feedback_til"
@@ -71,4 +71,19 @@
         android:layout_marginBottom="42dp"
         android:background="@android:drawable/screen_background_light_transparent"
         android:text="@string/vizualizare_feedback_btn_hint" />
+
+
+
+    <Button
+        android:id="@+id/vizualizare_feedback_btn_feedback"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentBottom="true"
+        android:layout_marginStart="240dp"
+        android:layout_marginLeft="240dp"
+        android:layout_marginBottom="39dp"
+        android:background="@android:drawable/screen_background_light_transparent"
+        android:text="@string/feedback" />
 </RelativeLayout>

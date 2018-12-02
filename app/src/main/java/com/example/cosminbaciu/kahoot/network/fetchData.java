@@ -3,7 +3,7 @@ package com.example.cosminbaciu.kahoot.network;
 import android.os.AsyncTask;
 import android.view.View;
 
-import com.example.cosminbaciu.kahoot.ProfMenuActivity;
+import com.example.cosminbaciu.kahoot.profesorActivity.ProfMenuActivity;
 
 import java.io.BufferedReader;
 import java.io.IOException;

@@ -9,7 +9,7 @@
     android:paddingLeft="20dp"
     android:paddingRight="20dp"
     android:scrollbarDefaultDelayBeforeFade="@android:integer/status_bar_notification_info_maxnum"
-    tools:context=".AddStudentsProfileActivity">
+    tools:context=".studentActivity.AddStudentsProfileActivity">
 
 
 

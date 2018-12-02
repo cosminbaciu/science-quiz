@@ -5,6 +5,9 @@ import android.support.v7.app.AppCompatActivity;
 import android.view.Menu;
 import android.view.MenuItem;
 
+import com.example.cosminbaciu.kahoot.R;
+import com.example.cosminbaciu.kahoot.profesorActivity.AddTestActivity;
+
 public class AbstractActivity extends AppCompatActivity {
 
     @Override
