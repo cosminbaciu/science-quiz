@@ -11,8 +11,10 @@ import android.widget.Button;
 import android.widget.Spinner;
 import android.widget.Toast;
 
+import com.example.cosminbaciu.kahoot.database.DatabaseRepository;
 import com.example.cosminbaciu.kahoot.login.MainActivity;
 import com.example.cosminbaciu.kahoot.R;
+import com.example.cosminbaciu.kahoot.util.StudentUser;
 
 public class AddStudentsProfileActivity extends AppCompatActivity {
     TextInputEditText tieFirstName;
@@ -23,6 +25,9 @@ public class AddStudentsProfileActivity extends AppCompatActivity {
     TextInputEditText tiePassword2;
     Spinner spnSerie;
     Button addStudents;
+
+    DatabaseRepository repository=new DatabaseRepository(this);
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -44,6 +49,8 @@ public class AddStudentsProfileActivity extends AppCompatActivity {
         spnSerie.setAdapter(adapter);
         addStudents = findViewById(R.id.student_add);
         addStudents.setOnClickListener(Add());
+
+
     }
 
     private View.OnClickListener Add() {
@@ -51,9 +58,19 @@ public class AddStudentsProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
+                    String FirstName=tieFirstName.getText().toString();
+                    String LastName= tieLastName.getText().toString();
+                    Integer Grupa=Integer.parseInt(tieGrupa.getText().toString());
+                    String Serie=spnSerie.getSelectedItem().toString();
+                    String Email=tieEmail.getText().toString();
+                    String Password=tiePassword.getText().toString();
+                    repository.open();
+                    Long IdUser=repository.insertUser(FirstName,LastName,Email,Password);
+                    Long IdStud=repository.insertStud(Grupa,Serie,IdUser);
+                    repository.close();
                     Toast.makeText(getApplicationContext(), getString(R.string.student_adaugat), Toast.LENGTH_LONG).show();
-                    Intent intent=new Intent(getApplicationContext(),MainActivity.class);
-                    startActivity(intent);
+                    Intent intent=new Intent(getApplicationContext(),MainStudentActivity.class);
+
                 }
             }
         };

@@ -9,13 +9,4 @@
     android:orientation="vertical"
     tools:context=".profesorActivity.GroupsActivity">
 
-    <TextView
-        android:id="@+id/textView"
-        android:layout_width="match_parent"
-        android:layout_height="41dp"
-        android:text="@string/my_classes"
-        android:textAlignment="center"
-        android:textColor="@android:color/black"
-        android:textSize="25dp"
-        android:textStyle="bold" />
 </LinearLayout>

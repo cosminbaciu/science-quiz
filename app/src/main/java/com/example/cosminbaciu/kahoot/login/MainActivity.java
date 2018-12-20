@@ -2,15 +2,16 @@ package com.example.cosminbaciu.kahoot.login;
 
 import android.content.Intent;
 import android.os.Bundle;
-import android.view.View;
 import android.view.Menu;
 import android.view.MenuItem;
+import android.view.View;
 import android.widget.Button;
 import android.widget.EditText;
+import android.widget.TextView;
 import android.widget.Toast;
 
-import com.example.cosminbaciu.kahoot.R;
 import com.example.cosminbaciu.kahoot.AbstractActivity;
+import com.example.cosminbaciu.kahoot.R;
 import com.example.cosminbaciu.kahoot.profesorActivity.ProfMenuActivity;
 import com.example.cosminbaciu.kahoot.profesorActivity.ProfessorActivity;
 import com.example.cosminbaciu.kahoot.studentActivity.AddStudentsProfileActivity;
@@ -26,6 +27,9 @@ public class MainActivity extends AbstractActivity {
     private String profPassword = Constants.adminPassword;
     private String studentName = Constants.studEmail;
     private String studentPassword = Constants.studPassword;
+    private TextView infoEmailStud;
+    private TextView infoEmailAdmin;
+    private TextView infoPasswd;
     EditText login_email_pt;
     EditText login_password;
 
@@ -40,6 +44,9 @@ public class MainActivity extends AbstractActivity {
         login = findViewById(R.id.login_btn_save);
         login_email_pt = findViewById(R.id.login_email_pt);
         login_password = findViewById(R.id.login_et_password);
+        infoEmailStud = findViewById(R.id.info_stud_email);
+        infoEmailAdmin = findViewById(R.id.info_prof_email);
+        infoPasswd = findViewById(R.id.info_passwd);
 
         login.setOnClickListener(login());
 
@@ -54,24 +61,23 @@ public class MainActivity extends AbstractActivity {
             @Override
             public void onClick(View v) {
 
-                if (login_email_pt.getText().toString().equals(studentName) && login_password.getText().toString().equals(studentPassword))
-                {
-                    Intent intent=new Intent(getApplicationContext(),MainStudentActivity.class);
+
+                if (login_email_pt.getText().toString().equals(studentName) && login_password.getText().toString().equals(studentPassword)) {
+                    Intent intent = new Intent(getApplicationContext(), MainStudentActivity.class);
                     startActivity(intent);
+                } else if (login_email_pt.getText().toString().equals(profName) && login_password.getText().toString().equals(profPassword)) {
+                    Intent intent = new Intent(getApplicationContext(), ProfMenuActivity.class);
+                    startActivity(intent);
+                } else {
+
+                    Toast.makeText(getApplicationContext(), getString(R.string.validare), Toast.LENGTH_LONG).show();
+
                 }
 
-                else if (login_email_pt.getText().toString().equals(profName) && login_password.getText().toString().equals(profPassword))
-                {
-                    Intent intent=new Intent(getApplicationContext(),ProfMenuActivity.class);
-                    startActivity(intent);
-                }
-                else{
-                    Toast.makeText(getApplicationContext(),getString(R.string.validare),Toast.LENGTH_LONG).show();
-                }
+
             }
         };
     }
-
 
 
     private View.OnClickListener registerStudent() {

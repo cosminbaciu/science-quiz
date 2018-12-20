@@ -28,7 +28,6 @@ public class ProfMenuActivity extends AbstractActivity {
     Button changePassword;
     Button addTest;
     Button showTests;
-    Button jsondata;
     Switch profLogOut;
 
     List<Test> listaTeste;
@@ -42,14 +41,11 @@ public class ProfMenuActivity extends AbstractActivity {
         addTest = findViewById(R.id.button5);
         showTests = findViewById(R.id.button6);
         changePassword = findViewById(R.id.button4);
-        jsondata = findViewById(R.id.button9);
 
         addTest.setOnClickListener(addTest());
         showTests.setOnClickListener(showTests());
         changePassword.setOnClickListener(changePassword());
-        jsondata = (Button) findViewById(R.id.button9);
         data = findViewById(R.id.textView7);
-        jsondata.setOnClickListener(showJson());
 
 
         profLogOut =findViewById(R.id.prof_switch_login);
@@ -111,28 +107,28 @@ public class ProfMenuActivity extends AbstractActivity {
         };
     }
 
-    private View.OnClickListener showJson() {
-        return new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-
-                try {
-                    JSONObject jsonObject = new JSONObject(data.getText().toString());
-
-                    JSONArray tests = jsonObject.getJSONArray("teste");
-
-                    listaTeste = ItemParser.getItemListFromJsonArray(tests);
-
-                    Toast toast = Toast.makeText(getApplicationContext(), listaTeste.toString(), Toast.LENGTH_LONG);
-                    toast.show();
-
-
-                    } catch (JSONException e1) {
-                    e1.printStackTrace();
-                }
-            }
-        };
-    }
+//    private View.OnClickListener showJson() {
+//        return new View.OnClickListener() {
+//            @Override
+//            public void onClick(View v) {
+//
+//                try {
+//                    JSONObject jsonObject = new JSONObject(data.getText().toString());
+//
+//                    JSONArray tests = jsonObject.getJSONArray("teste");
+//
+//                    listaTeste = ItemParser.getItemListFromJsonArray(tests);
+//
+//                    Toast toast = Toast.makeText(getApplicationContext(), listaTeste.toString(), Toast.LENGTH_LONG);
+//                    toast.show();
+//
+//
+//                    } catch (JSONException e1) {
+//                    e1.printStackTrace();
+//                }
+//            }
+//        };
+//    }
 
 
 }
