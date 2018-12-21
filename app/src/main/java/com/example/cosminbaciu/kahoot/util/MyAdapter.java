@@ -9,15 +9,17 @@ import android.view.ViewGroup;
 import android.widget.BaseAdapter;
 
 import com.example.cosminbaciu.kahoot.R;
+import com.example.cosminbaciu.kahoot.network.Test;
 import com.example.cosminbaciu.kahoot.studentActivity.VizualizareFeedbackActivity;
 
 import java.util.ArrayList;
+import java.util.List;
 
 public class MyAdapter extends BaseAdapter  {
-    public ArrayList<Item> lista;//lista de iteme
+    public List<Teste> lista;//lista de iteme
      Activity context;
 
-    public MyAdapter(ArrayList<Item> list, Activity context) {
+    public MyAdapter(List<Teste> list, Activity context) {
         this.lista = list;
         this.context = context;
     }
@@ -47,16 +49,16 @@ public class MyAdapter extends BaseAdapter  {
             listViewHolder=new ListViewHolder();//initializam o nou lista in care punem elementele pentru un item
             listViewHolder.tvTestName=row.findViewById(R.id.name_test);
             listViewHolder.btnItem=row.findViewById(R.id.button_item);
-            listViewHolder.tvDate = row.findViewById(R.id.adapterDate);
+            listViewHolder.tvPromovare = row.findViewById(R.id.adapterDate);
             row.setTag(listViewHolder);//
         }
         else{
             row=convertView;
             listViewHolder= (ListViewHolder) row.getTag();//
         }
-        final Item items= (Item) getItem(position);//item-ul de pe pozitia respectiva
-        listViewHolder.tvTestName.setText(items.nameTest);//setam numele testului
-        listViewHolder.tvDate.setText(String.valueOf(items.getDateTest()));
+        final Teste tests= (Teste) getItem(position);//item-ul de pe pozitia respectiva
+        listViewHolder.tvTestName.setText(tests.getName());//setam numele testului
+        listViewHolder.tvPromovare.setText(String.valueOf(tests.getPromoteLevel()));
         listViewHolder.btnItem.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {

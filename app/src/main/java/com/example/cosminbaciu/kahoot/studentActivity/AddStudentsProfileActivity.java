@@ -15,6 +15,7 @@ import com.example.cosminbaciu.kahoot.database.DatabaseRepository;
 import com.example.cosminbaciu.kahoot.login.MainActivity;
 import com.example.cosminbaciu.kahoot.R;
 import com.example.cosminbaciu.kahoot.util.StudentUser;
+import com.example.cosminbaciu.kahoot.util.User;
 
 public class AddStudentsProfileActivity extends AppCompatActivity {
     TextInputEditText tieFirstName;
@@ -27,6 +28,8 @@ public class AddStudentsProfileActivity extends AppCompatActivity {
     Button addStudents;
 
     DatabaseRepository repository=new DatabaseRepository(this);
+    User user=new User();
+    StudentUser studentUser=new StudentUser();
 
 
     @Override
@@ -58,19 +61,19 @@ public class AddStudentsProfileActivity extends AppCompatActivity {
             @Override
             public void onClick(View v) {
                 if (isValid()) {
-                    String FirstName=tieFirstName.getText().toString();
-                    String LastName= tieLastName.getText().toString();
-                    Integer Grupa=Integer.parseInt(tieGrupa.getText().toString());
-                    String Serie=spnSerie.getSelectedItem().toString();
-                    String Email=tieEmail.getText().toString();
-                    String Password=tiePassword.getText().toString();
+                    user.setFirstName(tieFirstName.getText().toString());
+                    user.setLastName(tieLastName.getText().toString());
+                    studentUser.setGrupa(Integer.parseInt(tieGrupa.getText().toString()));
+                    studentUser.setSeria(spnSerie.getSelectedItem().toString());
+                    user.setEmail(tieEmail.getText().toString());
+                    user.setPassword(tiePassword.getText().toString());
                     repository.open();
-                    Long IdUser=repository.insertUser(FirstName,LastName,Email,Password);
-                    Long IdStud=repository.insertStud(Grupa,Serie,IdUser);
+                    Long IdUser=repository.insertUser(user.getFirstName(),user.getLastName(),user.getEmail(),user.getPassword());
+                    Long IdStud=repository.insertStud(studentUser.getGrupa(),studentUser.getSeria(),IdUser);
                     repository.close();
                     Toast.makeText(getApplicationContext(), getString(R.string.student_adaugat), Toast.LENGTH_LONG).show();
                     Intent intent=new Intent(getApplicationContext(),MainStudentActivity.class);
-
+                    startActivity(intent);
                 }
             }
         };
