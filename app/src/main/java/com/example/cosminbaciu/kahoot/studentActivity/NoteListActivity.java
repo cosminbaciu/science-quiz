@@ -23,8 +23,8 @@ public class NoteListActivity extends AppCompatActivity {
    private MyAdapter adapter;
    List<Teste> teste=new ArrayList<>();
 
-   @SuppressLint("SimpleDateFormat")
-   SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-mm-yyyy");
+//   @SuppressLint("SimpleDateFormat")
+//   SimpleDateFormat simpleDateFormat = new SimpleDateFormat("dd-mm-yyyy");
 
    DatabaseRepository repository=new DatabaseRepository(this);
    
